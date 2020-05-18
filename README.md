@@ -3,9 +3,9 @@
  A sample project to demonstrate how to use Verve Identity libraries for authentication.
 ###  How it works
 1. Uses Verve Identity Core libraries 
-		a. Verve.Identity.Core.Model
-		b. Verve.Identity.Core.Service
-		c. Verve.Identity.Core.IdentityContext
+    1. Verve.Identity.Core.Model
+    2. Verve.Identity.Core.Service
+    1. Verve.Identity.Core.IdentityContext
 2. Inherit `UserAccount` class from `VerveUserAccount` if you want to customize user account.
 3. Inherit `Role` from `VerveRole` class if you want to customize your role class.
 4. Inherit Application db context from `VerveIdentityDbContext<UserAccount, Role>`. 		
