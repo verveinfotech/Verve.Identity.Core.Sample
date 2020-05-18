@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.4" />
+    <PackageReference Include="Verve.Identity.Core.IdentityContext" Version="1.20200517.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Verve.Identity.Core.Sample.Entity\Verve.Identity.Core.Sample.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
