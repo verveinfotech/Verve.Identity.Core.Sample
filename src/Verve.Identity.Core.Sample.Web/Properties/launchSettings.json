@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Verve.Identity.Core.Test.Web": {
+    "Verve.Identity.Core.Sample.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "",

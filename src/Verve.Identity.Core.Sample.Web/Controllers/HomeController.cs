@@ -8,6 +8,7 @@ namespace Verve.Identity.Core.Sample.Web.Controllers
     public class HomeController : ControllerBase
     {
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Get()
         {
             return Ok(new { applicationName = "Test Identity" });

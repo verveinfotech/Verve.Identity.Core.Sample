@@ -2,6 +2,8 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +35,13 @@ namespace Verve.Identity.Core.Sample.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                 .RequireAuthenticatedUser()
+                                 .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            });
             var connectionString = Configuration.GetSection("SqlServer:ConnectionString").Get<string>();
 
             services.AddDbContext<TestApplicationDbContext>(builder => builder.UseSqlServer(connectionString));
